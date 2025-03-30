@@ -1,5 +1,5 @@
 {% set name = "rectangle-packer" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.4" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rectangle-packer-{{ version }}.tar.gz
-  sha256: 34e450029255f726c4a8e6e939a18cad5879f0d9fe588c1878fe85c872dcbe41
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: bddc7f8d94a08bed320b33392bfd00015e18ee315f6bc7b3deefcf35f7609c60
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython <3                              # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - cython <3
     - pip
