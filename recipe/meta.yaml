@@ -1,5 +1,5 @@
 {% set name = "rectangle-packer" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 64d18e4e2fb0bec05b3e6cf4f133a54677c3001061186dd93d8442568e3eaa17
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 21f4ae5213b13ae34194172ce166871228d3dcc212054fa8f16483dbeaffdf25
 
 build:
   number: 0
